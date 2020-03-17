@@ -171,6 +171,7 @@ def test_read_search_results_provides_debtor_at_time_of_matched_registration_num
     second_event.registration_date = now + datetime.timedelta(seconds=1)
     third_event = stub_financing_statement_event('123458C', financing_statement=fin_stmt)
     third_event.registration_date = now + datetime.timedelta(seconds=2)
+
     first_debtor = models.party.Party(
         type_code='DE', last_name='Simpson', first_name='Homer', base_registration_number=fin_stmt.registration_number,
         starting_registration_number=base_event.registration_number,
