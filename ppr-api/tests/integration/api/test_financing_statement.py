@@ -40,7 +40,10 @@ def test_read_financing_statement_with_changed_registering_party_should_provide_
         registering_party={'first_name': 'Homer', 'last_name': 'Simpson'}
     )
     fin_stmt = sample_data_utility.create_test_financing_statement_event(
-        fin_stmt, registering_party={'first_name': 'Charles', 'middle_name': 'Montgomery', 'last_name': 'Burns'}
+        fin_stmt, registering_party={'first_name': 'Charles', 'middle_name': 'Montgomery', 'last_name': 'Burns',
+                                     'address': {'line1': '1000 Mammon Lane', 'city': 'Springfield',  'country': 'CA',
+                                                 'postal_code': 'V1A 1A1'}
+                                     }
     )
 
     rv = client.get('/financing-statements/{}'.format(fin_stmt.registration_number))
@@ -333,7 +336,9 @@ def test_create_financing_statement_persists_vehicle_collateral():
 def get_minimal_payload():
     return {
         'type': 'SECURITY_AGREEMENT',
-        'registeringParty': {'personName': {'first': 'Homer', 'last': 'Simpson'}},
+        'registeringParty': {'personName': {'first': 'Homer', 'last': 'Simpson'},
+                             'address': {'street': '742 Evergreen Terrace', 'city': 'Springfield',
+                                         'country': 'CA', 'postalCode': 'V1A 1A1'}},
         'securedParties': [],
         'debtors': [],
         'vehicleCollateral': [],
