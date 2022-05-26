@@ -1,4 +1,5 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=bcgov_ppr&metric=alert_status)](https://sonarcloud.io/dashboard?id=bcgov_ppr)[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=bcgov_ppr&metric=ncloc)](https://sonarcloud.io/dashboard?id=bcgov_ppr)[![codecov](https://codecov.io/gh/bcgov/ppr/branch/master/graph/badge.svg)](https://codecov.io/gh/bcgov/ppr)
+[![Lifecycle:Retired](https://img.shields.io/badge/Lifecycle-Retired-d45500)](<Redirect-URL>)
 
 # Personal Property Registry (PPR)
 
